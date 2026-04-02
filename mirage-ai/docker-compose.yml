@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mirage_ai_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017
+      - SECRET_KEY=mirage_ai_super_secret_key_12345
+    depends_on:
+      - mongodb
+    networks:
+      - mirage_net
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mirage_ai_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - mirage_net
+    restart: unless-stopped
+
+networks:
+  mirage_net:
+    driver: bridge
+
+volumes:
+  mongo_data:
