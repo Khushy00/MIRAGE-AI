@@ -1,4 +1,4 @@
-** Mirage AI – Deepfake Detection and Honeypot-Based Cybersecurity System**
+## Mirage AI – Deepfake Detection and Honeypot-Based Cybersecurity System
 
 ## Overview
 
