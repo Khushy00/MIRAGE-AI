@@ -108,6 +108,9 @@ project/
 Khushi 
 Cybersecurity & AI Enthusiast
 
+Vaibhav Manchanda
+Full Stack Developer & AI Enthusiast
+
 ---
 
 ## License
